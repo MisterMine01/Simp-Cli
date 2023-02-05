@@ -1,7 +1,12 @@
 #include "simp_cli/simp_cli.hpp"
 #include <iostream>
 
-
+/**
+ * @brief Construct SimpCli object
+ * @param name Name of the CLI
+ * @param version Version of the CLI
+ * @param description Description of the CLI
+*/
 mm1::simp_cli::SimpCli::SimpCli(std::string name, std::string version, std::string description)
 {
     this->name = name;
@@ -10,15 +15,30 @@ mm1::simp_cli::SimpCli::SimpCli(std::string name, std::string version, std::stri
     this->callbacks = std::vector<mm1::simp_cli::Callback *>();
 }
 
+/**
+ * @brief Destroy SimpCli object
+ * @return
+*/
 mm1::simp_cli::SimpCli::~SimpCli()
 {
 }
 
+/**
+ * @brief Add a callback to the list
+ * @param callback Callback
+ * @return
+*/
 void mm1::simp_cli::SimpCli::add_callback(mm1::simp_cli::Callback *callback)
 {
     this->callbacks.push_back(callback);
 }
 
+/**
+ * @brief Run the CLI
+ * @param argc Number of arguments
+ * @param argv Arguments
+ * @return
+*/
 void mm1::simp_cli::SimpCli::run(int argc, char **argv)
 {
     std::vector<std::string> args;

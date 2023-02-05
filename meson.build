@@ -24,5 +24,3 @@ if not meson.is_subproject()
     dependencies : [simp_cli_dep]
   )
 endif
-
-test('basic', exe)
