@@ -1,2 +1,2 @@
 # Simp-Cli
-A better way to make cli faster
+A better way to make cli faster in c++
